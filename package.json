@@ -25,7 +25,6 @@
   "license": "Apache 2.0",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
-    "@babel/compat-data": "7.8.6",
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "eslint": "^6.8.0",
