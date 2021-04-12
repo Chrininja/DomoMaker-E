@@ -1,11 +1,21 @@
 "use strict";
-"use strict";
 
 var handleError = function handleError(message) {
   $("#errorMessage").text(message);
   $("#domoMessage").animate({
     width: 'toggle'
   }, 350);
+};
+
+var handleDelete = function handleDelete(e) {
+  e.preventDefault();
+
+  console.dir($("#delete").serialize());
+  sendAjax('POST', $("#delete").attr("action"), $("#delete").serialize(), function () {
+      loadDomosFromServer($("#token").val());
+  });
+
+  return false;
 };
 
 var redirect = function redirect(response) {
