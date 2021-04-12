@@ -63,7 +63,7 @@ const DomoList = function(props) {
     const domoNodes = props.domos.map(function(domo) {
         return (
             <div key={domo._id} className="domo">
-                <form id="delete" onSubmit={handleDelete} action="/delete" method='POST' style ={{position: "absolute", right: "5%"}}>
+                <form id="delete" onSubmit={handleDelete} action="/delete" method='POST' style ={{position: "absolute", right: "1%"}}>
                     <input type="hidden" name="_id" value={domo._id} />
                     <input id="token" type="hidden" name="_csrf" value={props.csrf} />
                     <input style={{height: "20px"}} type="image" src="/assets/img/trash.png" border="0" alt="Submit" />
@@ -71,6 +71,7 @@ const DomoList = function(props) {
                 <img src="/assets/img/domoface.jpeg" alt="domo face" className="domoFace" />
                 <h3 className="domoName"> Name: {domo.name} </h3>
                 <h3 className="domoAge"> Age: {domo.age} </h3>
+                <h3 className="domoLevel"> Level: {domo.level} </h3>
             </div>
         );
     });
